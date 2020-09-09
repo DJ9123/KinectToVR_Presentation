@@ -1,40 +1,171 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="reveal/reset.css">
-		<link rel="stylesheet" href="reveal/reveal.css">
-		<link rel="stylesheet" href="reveal/theme/black.css" id="theme">
+  <title>KinectToVR</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="reveal/plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <link rel="stylesheet" href="reveal/reset.css">
+  <link rel="stylesheet" href="reveal/reveal.css">
+  <link rel="stylesheet" href="reveal/theme/black.css" id="theme">
 
-		<script src="reveal/reveal.js"></script>
-		<script src="reveal/plugin/notes/notes.js"></script>
-		<script src="reveal/plugin/markdown/markdown.js"></script>
-		<script src="reveal/plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="reveal/plugin/highlight/monokai.css" id="highlight-theme">
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- SLIDE 1 -->
+      <section data-markdown>
+        <textarea data-template>
+          <img data-src="./img/k2vr-logo.svg">
+
+          # Kinect To VR
+          ---
+          An affordable full-body tracking solution
+        </textarea>
+      </section>
+
+      <!-- SLIDE 2 -->
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            ### So, what is it?
+            
+            Low cost full-body tracking using the Xbox 360 or Xbox One Kinect.
+            <video loop data-autoplay src="./video/Demo1.mp4"></video>
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### 
+            Development started September 2017 as an open source alternative to Driver4VR.
+            The community has continued development as KinectToVR EX.
+
+            ![alt text][Contrib]
+
+            [Contrib]: ./img/git-contrib.png
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Best usage and potential applications?
+            - Giving a user or developer cheap access for full body tracking
+            - Adding additional control options within an application
+                - Joint interaction within a 3D environment
+                - Cheap motion capture
+                - Joint tracking
+          </textarea>
+        </section>
+      </section>
+
+      <!-- SLIDE 3 -->
+      <section data-markdown>
+        <textarea data-template>
+          The Basics: How does it work?
+
+          The Kinect for Windows SDK offers tools for skeletal tracking which are then emulated into limbs for the feet
+          and hips.
+          <video loop data-autoplay src="./video/Demo2.mp4"></video>
+        </textarea>
+      </section>
+
+      <!-- SLIDE 4 -->
+      <section data-markdown>
+        <textarea data-template>
+          Why is it a good use of VR? Why is it unique? What’s cool about it?
+
+          - Most applications are built with only a HMD and hand position in mind. Additional tracking points can help
+            decrease simulator sickness.
+
+          - Cost
+
+              - Xbox One or 360 Kinect can be found for $25-50
+              - In comparison, VIVE Trackers are available for $99 per tracker. ($300 for feet and hip tracking)
+
+        </textarea>
+      </section>
+
+      <!-- SLIDE 5 -->
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Dizziness Rating: 1
+            
+            Overall, applications involving foot and hip tracking only cause slight dizziness to the user due to just
+            being visual display of the user and not changing visual tracking.
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Weaknesses
+            
+            - Common issues with the Kinect is loss of tracking for when out of view from the Kinect's sensors.
+            - Due to tracking limitations, the SDK cannot determine the direction the user is facing.
+              Experimental builds have solved this issue.
+            - Setup
+                - Kinect placement
+                - Syncing Kinect with SteamVR
+          </textarea>
+        </section>
+      </section>
+
+      <!-- SLIDE 6 -->
+      <section data-markdown>
+        <textarea data-template>
+          ### Similar applications
+          - Driver4VR - Paid software which also uses the Kinect
+          - Vive Trackers - $99 per puck to add additional joints within SteamVR
+        </textarea>
+      </section>
+
+      <!-- SLIDE 7 -->
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Conclusion
+            If you're looking into a cheap solution to full body tracking, KinectToVR will help you jump over many hurdles.
+            There is an online community supporting the development of this application with their ideas/issues
+            and therefore is rapidly increasing in features.
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### References
+  
+            Keep Up To Date - https://k2vr.tech/
+            
+            K2EX (Forked) - https://github.com/KinectToVR
+  
+            --- 
+  
+            Original Project (Outdated) - https://github.com/sharkyh20/KinectToVR
+  
+          </textarea>
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="reveal/reveal.js"></script>
+  <script src="reveal/plugin/notes/notes.js"></script>
+  <script src="reveal/plugin/markdown/markdown.js"></script>
+  <script src="reveal/plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
 </html>
